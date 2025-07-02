@@ -1,0 +1,179 @@
+/*FONTS*/
+@font-face {
+    font-family: 'Clairo'; 
+    src: url('fonts/Clario-Regular.woff2') format('woff2'), Arial, serif;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clairo'; 
+    src: url('fonts/Clario-Bold.woff2') format('woff2'), Arial, serif;
+    font-weight: bold;
+    font-style: bold;
+}
+
+
+/*-----------*/
+body {
+    font-family: 'Clairo', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Make sure content is centered vertically on the page */
+    margin: 0;
+    background-color: #fff;
+    text-align: center; /* Center text within elements */
+}
+
+.container {
+    padding: 20px 40px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
+}
+
+header {
+    color: #D64000;
+    margin-bottom: 30px;
+    font-family: 'Clairo', serif;
+}
+header p {
+    color: #000;
+}
+
+section h2 {
+    color: #D64000;
+    margin-bottom: 30px;
+}
+
+#initial-choices button {
+    background-color: #123015;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#initial-choices button:hover {
+    background-color: #EDF2F0;
+    border-color: #1D4B34;
+    border-width: 2px;
+    border-style: solid;
+    color: #123015;
+}
+
+.hidden {
+    display: none; /* This class hides elements */
+}
+
+/* Styling for the content sections (can be expanded later) */
+#usability-options, #foundational-options {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 8px 15px;
+    background-color: #fff;
+    border-color: #1D4B34;
+    border-width: 2px;
+    border-style: solid;
+    color: #1D4B34;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #EDF2F0;
+    border-color: #1D4B34;
+    border-width: 2px;
+    border-style: solid;
+    color: #123015;
+    padding: 8px 15px;
+}
+
+/*form*/
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Align labels and inputs to the left within the group */
+}
+
+.form-group label {
+    display: block; /* Makes the label take the full width */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%; /* Make inputs take full width of their container */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width calculation with padding */
+    margin-bottom: 5px; /* Space for the small text if any */
+}
+
+.form-group small {
+    display: block;
+    color: #777;
+    font-size: 0.9em;
+}
+
+#btn-calculate-foundational {
+    background-color: #28a745; /* A green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px; /* Space above the button */
+    margin-bottom: 20px; /* Space below the button before the result */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#btn-calculate-foundational:hover {
+    background-color: #218838;
+}
+
+.result-display {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    font-size: 1.1em;
+    text-align: center; /* Center the result text */
+}
+
+.result-display p {
+    margin: 0; /* Remove default paragraph margin */
+}
+
+/* Add to your style.css */
+
+.error-message {
+    display: block; /* So it appears on its own line below the input or small text */
+    color: #D64000; /* A standard error red color */
+    font-size: 0.9em;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* You might also want to style invalid inputs visually */
+input:invalid {
+  border-color: #D64000;  /*Be careful with this, as HTML5 validation can trigger it preemptively*/
+}
+
+/* More specific styling for inputs that *we* mark as having an error via JS if needed */
+input.input-error {
+    border-color: #D64000;
+    box-shadow: 0 0 3px #D64000;
+}

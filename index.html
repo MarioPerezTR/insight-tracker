@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Insight Scorer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Score Your Research Insights</h1>
+        <p>
+          Welcome! This tool helps you evaluate your research findings. Please
+          choose a path below to begin scoring.
+        </p>
+      </header>
+
+      <section id="initial-choices">
+        <h2>Choose Your Path:</h2>
+        <button id="btn-usability">Score Usability Issues</button>
+        <button id="btn-foundational">Score Foundational Insights</button>
+      </section>
+
+      <section id="usability-options" class="hidden">
+        <!-- Content for Usability Issues will go here -->
+        <h2>Usability Issues Scoring</h2>
+        <p>
+          You've chosen to score Usability Issues. Options will appear here.
+        </p>
+        <button class="back-button">Go Back</button>
+      </section>
+
+      <!-- In index.html, find this section and replace its content: -->
+      <section id="foundational-options" class="hidden">
+        <h2>Foundational Insights Scoring</h2>
+        <p>
+          Enter the details of your insight below to calculate its potential
+          impact.
+        </p>
+
+        <div class="form-group">
+          <label for="insight-text">Describe the Insight:</label>
+          <textarea
+            id="insight-text"
+            rows="4"
+            placeholder="e.g., Users struggle to find the checkout button on mobile..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="product-name">Specific Product/Feature (optional):</label>
+          <input
+            type="text"
+            id="product-name"
+            placeholder="e.g., 'Our Mobile App Checkout'"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="score-jtbd"
+            >1. Contribution to Core JTBD/CXO (0-5):</label
+          >
+          <input
+            type="number"
+            id="score-jtbd"
+            min="0"
+            max="5"
+            placeholder="0-5"
+            aria-describedby="error-jtbd"
+          />
+          <small class="input-hint">0=not at all, 5=significantly</small>
+          <span class="error-message" id="error-jtbd"></span>
+          <!-- Error message for JTBD -->
+        </div>
+
+        <div class="form-group">
+          <label for="score-efficiency"
+            >2. Improvement to Process Efficiency (0-5):</label
+          >
+          <input
+            type="number"
+            id="score-efficiency"
+            min="0"
+            max="5"
+            placeholder="0-5"
+            aria-describedby="error-efficiency"
+          />
+          <small class="input-hint">0=not at all, 5=significantly</small>
+          <span class="error-message" id="error-efficiency"></span>
+          <!-- Error message for Efficiency -->
+        </div>
+
+        <div class="form-group">
+          <label for="score-delight"
+            >3. Enhancement to Customer Delight (0-5):</label
+          >
+          <input
+            type="number"
+            id="score-delight"
+            min="0"
+            max="5"
+            placeholder="0-5"
+            aria-describedby="error-delight"
+          />
+          <small class="input-hint">0=not at all, 5=significantly</small>
+          <span class="error-message" id="error-delight"></span>
+          <!-- Error message for Delight -->
+        </div>
+
+        <button id="btn-calculate-foundational">Calculate Impact</button>
+
+        <div
+          id="foundational-result"
+          class="result-display"
+          style="margin-top: 20px"
+        >
+          <!-- Result will be displayed here -->
+        </div>
+
+        <button class="back-button">Go Back</button>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
