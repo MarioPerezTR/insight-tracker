@@ -51,5 +51,8 @@ Edit `style.css` to modify colors, fonts, or layout.
 - No server or special software needed
 
 ---
+## Code created by Carlos Alvarez
+
+---
 
 This is a standalone tool - no database, no installation, just open and use!
